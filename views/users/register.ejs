@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container dflex justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Register</h5>
+                    <form action="/verify-mail" method="GET" class="validated-form" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Username:</label>
+                            <input class="form-control" type="text" id="username" name="username" required>
+                            <div class="valid-feedback">Looks Good</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Display Name:</label>
+                            <input class="form-control" type="text" id="name" name="name" required>
+                            <div class="valid-feedback">Looks Good</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">email:</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                            <div class="valid-feedback">Looks Good</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">password:</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">Looks Good</div>
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="radio" name="mode" id="booker" value="booker" checked>
+                            <label class="form-check-label" for="booker">
+                                Regular User
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="radio" name="mode" id="owner" value="owner">
+                            <label class="form-check-label" for="owner">
+                                Hall Owner
+                            </label>
+                        </div>
+                    <div class="d-grid gap-2">
+                    <button class="btn btn-success">Register</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

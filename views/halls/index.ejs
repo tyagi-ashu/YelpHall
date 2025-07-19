@@ -1,0 +1,34 @@
+<% layout('layouts/boilerplate.ejs') %>
+<div id="cluster-map"></div>
+
+<h1>All halls</h1>
+<ul>
+    <% for(let hall of halls){ %>
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <% if(hall.images.length) {%>
+                        <!-- crossorigin required for helmet -->
+                    <img crossorigin="anonymous" class="img-fluid" alt="" src="<%=hall.images[0].url%>">
+                    <%}else{%>
+                    <img crossorigin="anonymous" class="img-fluid" alt="No image" src="https://res.cloudinary.com/dajo1wdr4/image/upload/v1749384124/download_nwtvgk.png">
+                    <% } %>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=hall.title %></h5>
+                        <p class="card-text"><%=hall.description%></p>
+                        <p class="text-muted"><%=hall.location%></p>
+                        <a class="btn btn-primary" href="/halls/<%=hall._id%> ">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</ul>
+<script>
+    const maptilerApiKey = '<%-process.env.MAPTILER_API_KEY %>';
+    //ignore the warning
+    const halls= {features:<%-JSON.stringify(halls)%>}
+</script>
+<script src="/javascripts/clusterMap.js"></script>

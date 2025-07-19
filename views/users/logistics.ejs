@@ -1,0 +1,25 @@
+<%-include('../partials/account.ejs') %>
+<div class="ps-lg-1-6 ps-xl-5">
+    <div class="mb-5 wow fadeIn">
+        <div class="text-start mb-2 wow fadeIn">
+            <h2 class="mb-0 text-primary">#Booking Logistics</h2>
+        </div>
+        <div id="logistic-container">
+            <%for(let i=0;i<date.length;i++){%>
+                <div class="d-flex mt-4 justify-content-between" id="logistic-value">
+                <ul class="list-unstyled">
+                <h5><%=date[i].toDateString()%></h5>
+                <%for(let j=0;j<time[i].length;j++){%>
+                    <li><%=time[i][j]%></li>
+                <%}%>
+                <li><%=price %></li>
+                </ul>
+                <img id="preview-image" src="<%=hall.images[0].url%>" alt="--Hall Preview--">
+                </div>
+            <%}%>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,48 @@
+how is that geoData getting location just from name
+
+
+image size restriction - server and client side
+image number restriction - server and client side
+
+
+pagination or infinite scroll on show page
+
+problem - joi vlaidatoin for html injection only working on reviews
+
+add payment system
+
+make a search bar with options for name and availability date in it
+
+store user location
+make a notification tab/icon(for owner- to accept booking request, for user- sale, new hall near them, etc)
+
+
+give hall owner the perm to remove or accept booking
+dont instantly book, but send a request to hall owner
+
+real email use instead of dummy before production
+check connection with mongo atlas..also from website
+
+images/ etc stuff isnt loading sometimes for scorer google profile
+
+deploy
+
+populate footer with the contact info for website
+
+
+
+---->make a user account section
+edit account details->
+email,name, password, 2fa setup
+setting->
+Language and localization options
+Privacy settings (who can see info)
+delete account
+logistics->
+all past published halls(owner)
+all past booked halls(user)(include the date-time in both of these)
+login history/activity(recent devices/sessions)
+payment->
+Payment methods
+Subscription plan details and upgrades
+Cancel subscription option

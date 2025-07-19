@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate.ejs') %>
+<div class="row">
+    <div class="col-md-6 offset-md-3 mb-4">
+        <div class="card shadow">
+        <div class="card-body">
+        <h5 class="card-title">New hall</h5>
+        <form action="/halls/new" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title:</label>
+                <input class="form-control" type="text" id="title" name="hall[title]" required>
+                <div class="valid-feedback">Looks Good</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text" id="location" name="hall[location]" required>
+                <div class="valid-feedback">Looks Good</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Images:</label>
+                <input type="file" class="form-control" id="image" name="image" multiple>
+            </div>
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image URL:</label>
+                <input class="form-control" type="text" id="image" name="hall[image]" required>
+                <div class="valid-feedback">Looks Good</div>
+            </div> -->
+            <div class="mb-3">
+                <label class="form-label" for="price">hall Price:</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price">$</span>
+                    <input type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby="price" name="hall[price]" required>
+                </div>
+                <div class="valid-feedback">Looks Good</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="hall[description]" required></textarea>
+                <div class="valid-feedback">Looks Good</div>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success btn-block">Add</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+</div>

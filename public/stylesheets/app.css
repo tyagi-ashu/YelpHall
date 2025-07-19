@@ -1,0 +1,132 @@
+#cluster-map{
+    width:100%;
+    height:500px;
+}
+
+#map{
+    width:100%;
+    height:300px;
+}
+img.d-block{
+    height:400px;
+}
+
+/* these are for book page */
+#book-big-card{
+    min-width:333px;
+}
+#book-big-card-1{
+    width:333px;
+    max-height:400px;
+}
+#book-big-card-2{
+    width:333px;
+    max-height:380px;
+}
+.btn-outline-info, .btn-primary{
+    border-radius: 30px;
+    margin:5px;
+}
+.time-btn:disabled{
+    color:darkslategray;
+    border-color:darkslategray;
+}
+#no-date-placeholder{
+    border:thick double green;
+    height:auto;
+    padding-top:50%;
+    padding-bottom:50%;
+    text-align:center;
+}
+
+/* The floating popup window */
+.popup {
+position: absolute;
+width: 300px;
+background: #fff;
+border: 1px solid #ccc;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+top: 100px;
+left: 100px;
+z-index: 1000;
+border-radius: 6px;
+user-select: none;
+}
+
+.popup-header {
+background: green;
+color: #fff;
+padding: 10px;
+cursor: move;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+}
+
+.popup-body {
+padding: 15px;
+}
+
+.close-btn {
+position: absolute;
+top: 5px;
+right: 10px;
+background: none;
+border: none;
+color: white;
+font-size: 18px;
+cursor: pointer;
+}
+
+/* accounts page */
+
+.text-secondary, .text-secondary-hover:hover {
+    color: #a80000 !important;
+}
+.text-primary, .text-primary-hover:hover {
+    color: #067e0a !important;
+}
+
+#logistic-container{
+    padding:1px;
+    background-color:rgb(249, 249, 240);
+}
+#logistic-value{
+    margin:1% 5%;
+    background-color:rgb(241, 241, 215);
+    border-bottom-color:rgb(60, 60, 53);
+    padding:1% 5%;
+}
+#preview-image{
+    max-width:200px;
+    max-height:200px;
+    width:20%;
+    height:20%;
+    filter:saturate(0);
+    border:thick double rgb(68, 70, 54);
+}
+#preview-image:hover{
+    transition:filter 0.4s ease;
+    filter: saturate(1);
+    border:thick double rgb(42, 43, 33);
+}
+.mini-nav .nav-link {
+    margin:0em 1em;
+    padding: 0.25rem 0;
+    font-weight: 700;
+    font-size:large;
+    color: rgba(45, 45, 45, 0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+    align-items:center;
+}
+
+.mini-nav .nav-link:hover{
+    color: rgba(0,0,0,0.5);
+    border-bottom-color:rgba(0,0,0,0.5);
+}
+
+.mini-nav .nav-link.active {
+    color: rgb(26, 26, 26);
+    border-bottom-color:rgb(26, 26, 26);
+
+}

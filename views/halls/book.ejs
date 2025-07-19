@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<div class="card shadow col-6 offset-sm-3 offset-2 mb-4" id="book-big-card">
+    <div class="card-body offset-lg-2 offset-xl-0">
+        <h5 class="card-title">Book hall</h5>
+        <div class="row align-self-center">
+        <div class="col-sm-6 col-xl mb-4" id="book-big-card-1">
+            <form action="/halls/<%=foundhall._id%>/book" method="POST" class="validated-form" id="submit-form" novalidate>
+                <input class="form-control" type="date" placeholder="Dates" name="bookedDate[date]" id="date-selector">
+                <input type="hidden" name="bookedDate[timeSlot]" id="hidden-input-1" value='[[]]'>
+                <input type="hidden" name="price" id="hidden-input-2" value="0">
+                <div class="valid-feedback">Looks Good</div>
+            </form>
+            <div class="d-grid gap-2 mt-3">
+                <button class="btn btn-success btn-block" id="show-pop">Show Receipt</button>
+            </div>
+        </div>
+        <div class="col-xl mb-4 overflow-y-auto" id="book-big-card-2">
+            <h4>Available Time Slots</h4>
+            <div id="no-date-placeholder">
+                <h5>Select Some Date First!!</h5>
+            </div>
+            <div id="appending-div">
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Window -->
+<div class="popup" id="popup">
+  <div class="popup-header" id="popupHeader">
+    Receipt
+    <button class="close-btn" id="hide-pop">×</button>
+  </div>
+  <div class="popup-body">
+    <article id="appending-article">
+
+    </article>
+    <b>Total: ₹</b><b id="price-tag">0</b>
+    <div class="d-grid gap-2 mt-3">
+        <button type="submit" form="submit-form" class="btn btn-success">Book</button>
+    </div>
+  </div>
+</div>
+
+<script>
+    const hall= <%-JSON.stringify(foundhall)%>;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/javascripts/book.js"></script>

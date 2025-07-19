@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate') %>
+<div class="container mb-3">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-4 mb-5 mb-lg-0 wow fadeIn">
+            <div class="card border-0 shadow">
+                <img crossorigin="anonymous" class="img-fluid" alt="No image" src="https://res.cloudinary.com/dajo1wdr4/image/upload/v1749384124/download_nwtvgk.png">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" fill="#eee" />
+                <circle cx="12" cy="10" r="3" stroke="currentColor" fill="#ccc" />
+                <path d="M6 20c0-3.33 5.33-4 6-4s6 .67 6 4" stroke="currentColor" />
+                </svg>
+                <div class="card-body p-1-9 p-xl-5">
+                    <div class="mb-4">
+                        <h3 class="h4 mb-0"><%=user.name%></h3>
+                        <%if(user.mode==='owner'){%>
+                        <span class="text-primary">Hall Owner</span>
+                        <% } %>
+                    </div>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3">Username: <%=user.username%></li>
+                        <li class="mb-3">Email: <%=user.email%></li>
+                        <% if(user.location){ %>
+                        <li><%=user.location%></li>
+                        <% }else{ %>
+                        <li class="text-secondary">&#9432; Update your location!!</li>
+                        <% } %>
+                    </ul>
+                    <button class="btn btn-primary">Update</button>
+                    <button class="btn btn-warning">Gold</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-center mini-nav mb-4">
+                <a class="nav-link <%=req.route.path==='/logistics'?'active':''%>" href="/logistics"><i>Logistics</i></a>
+                <a class="nav-link <%=req.route.path==='/settings'?'active':''%>" href="/settings"><i>Settings</i></a>
+                <a class="nav-link <%=req.route.path==='/security'?'active':''%>" href="/security"><i>Security</i></a>
+                <a class="nav-link <%=req.route.path==='/payment'?'active':''%>" href="/payment"><i>Payment</i></a>
+            </div>

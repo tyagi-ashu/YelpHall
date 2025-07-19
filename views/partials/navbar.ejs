@@ -1,0 +1,50 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Yelphall</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/halls">halls</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/halls/new">New hall</a>
+        </li>
+      </ul>
+      <div class="navbar-nav d-lg-none">
+        <a class="nav-link" href="/logistics">Account</a>
+      </div>
+      <div class="navbar-nav">
+        <% if(!currUser){ %>
+        <a class="nav-link" href="/login">LogIn</a>
+        <a class="nav-link" href="/register">Register</a>
+        <% }else{ %>
+        <a class="nav-link" href="/logout">LogOut</a>
+        <% } %>
+      </div>
+    </div>
+      <div class="navbar-nav d-none d-lg-block">
+        <a class="text-muted" href="/logistics">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" stroke="currentColor" fill="#eee" />
+          <circle cx="12" cy="10" r="3" stroke="currentColor" fill="#ccc" />
+          <path d="M6 20c0-3.33 5.33-4 6-4s6 .67 6 4" stroke="currentColor" />
+        </svg></a>
+      </div>
+  </div>
+</nav>
